@@ -13,7 +13,9 @@
     height: 100vh;
     background-color: #f2f2f2;
   }
-  
+  h1 {
+    text-align: center;
+   }
   /* Container for stories */
   .story-container {
     display: flex;
@@ -26,8 +28,8 @@
   
   /* Styling for each story (portrait rectangle) */
   .story {
-    width: 100 px; /* Adjust width */
-    height: 200 px; /* Adjust height for portrait shape */
+    width: 400px; /* Adjust width */
+    height: 600px; /* Adjust height for portrait shape */
     background-color: #ddd;
     position: relative;
     overflow: hidden;
@@ -39,6 +41,7 @@
     transition: transform 0.3s ease-in-out;
   }
   
+
   /* Animations for story "progress" */
   .story::before {
     content: "";
