@@ -85,4 +85,8 @@
   .right {
     right: 0;
   }
-  
+  #page1 {display: flex;}
+  #page2 {display: flex;}
+  #page3 {display: flex;}
+  #page4 {display: flex;}
+  #page5 {display: flex;}
