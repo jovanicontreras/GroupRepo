@@ -1,46 +1,28 @@
-// Get all story elements
-const stories = document.querySelectorAll('.story');
+let currentPage = 1;
+const totalPages = 5;
 
-// Initial index of the current story
-let currentStoryIndex = 0;
-
-// Function to show the current story and hide others
-function showStory(index) {
-  // Make sure index is within bounds
-  if (index < 0) index = stories.length - 1;
-  if (index >= stories.length) index = 0;
-
-  // Hide all stories
-  stories.forEach((story, i) => {
-    story.style.transform = `translateX(${(i - index) * 120}%)`; // Position stories based on index
-  });
-
-  // Update the current index
-  currentStoryIndex = index;
+function showPage(pageNumber) {
+  for (let i = 1; i <= totalPages; i++) {
+    const page = document.getElementById(`story${i}`);
+    if (page) {
+      page.style.display = (i === pageNumber) ? 'flex' : 'none';
+    }
+  }
 }
 
-// Add event listeners to the stories for navigation
-stories.forEach((story, index) => {
-  // Add the left and right clickable areas for each story
-  const leftClickZone = document.createElement('div');
-  leftClickZone.classList.add('click-zone', 'left');
-  const rightClickZone = document.createElement('div');
-  rightClickZone.classList.add('click-zone', 'right');
+function showNextPage() {
+  if (currentPage < totalPages) {
+    currentPage++;
+    showPage(currentPage);
+  }
+}
 
-  // Append left and right click zones to each story
-  story.appendChild(leftClickZone);
-  story.appendChild(rightClickZone);
+function showPreviousPage() {
+  if (currentPage > 1) {
+    currentPage--;
+    showPage(currentPage);
+  }
+}
 
-  // Left click zone to go to the previous story
-  leftClickZone.addEventListener('click', () => {
-    showStory(currentStoryIndex - 1);
-  });
-
-  // Right click zone to go to the next story
-  rightClickZone.addEventListener('click', () => {
-    showStory(currentStoryIndex + 1);
-  });
-});
-
-// Initially display the first story
-showStory(currentStoryIndex);
+// Show the first page initially
+showPage(currentPage);
