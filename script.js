@@ -1,5 +1,5 @@
 let currentPage = 1;
-const totalPages = 5;
+const totalPages = 6;
 
 function showPage(pageNumber) {
   for (let i = 1; i <= totalPages; i++) {
