@@ -49,8 +49,22 @@ p, ul {
   transform: translateY(-50%);
   cursor: pointer;
 }
-.left { left: 20px; }
-.right { right: 20px; }
+.left { left: 20px; 
+}
+.right { right: 20px; 
+}
+.dot { 
+  height: 15px; 
+  width: 15px; 
+  margin: 0 5px; 
+  background-color: #dfe0e17c; 
+  border-radius: 50%; 
+  display: inline-block; 
+  cursor: pointer; 
+} 
+.active { 
+  background-color: #1B66B2; 
+}
 
 /* Media sizing for smaller screens */ 
 @media (max-width: 768px) {
