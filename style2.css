@@ -1,7 +1,13 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.story-container {
+  margin: auto;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 20px; 
+  margin: 10px; 
+  max-width: 100%; 
+  box-sizing: border-box; 
 }
 .story {
   width: 100%;
@@ -16,48 +22,37 @@
   display: flex;
   flex-direction: column;
 }
-/*#story4 .content {
-  margin-top: 20px;
-}*/
 h1 {
   font-size: 28px;
   color: #333;
   margin-bottom: 15px;
-  /*word-wrap: break-word*/;
 }
-/*h4 {
-  font-size: 20px;
-  color: #444;
-  margin-bottom: 10px;
-}*/
 p, ul {
   font-size: 16px;
   line-height: 1.6;
   color: #555;
   margin-bottom: 20px;
 }
-ul {
-  list-style: disc;
-  padding-left: 20px;
-}
 .flourish-embed {
-  width: 100%;
-  height: 400px;
+  width: auto;
   margin: 20px 0;
 }
+
+/* For Navigation buttons*/
 .click-zone {
   width: 50px;
   height: 50px;
   background-color: #dfe0e17c;
   border-radius: 50%;
-  position: absolute;
-  top: 35%;
+  position:fixed;
+  top: 45%;
   transform: translateY(-50%);
   cursor: pointer;
 }
 .left { left: 20px; }
 .right { right: 20px; }
 
+/* Media sizing for smaller screens */ 
 @media (max-width: 768px) {
   .story-container {
     padding: 10px;
@@ -83,4 +78,3 @@ ul {
     height: 40px;
   }
 }
-
