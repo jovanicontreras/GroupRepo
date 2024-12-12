@@ -1,3 +1,6 @@
+body{
+  background-color: #565a5c;
+}
 .story-container {
   margin: auto;
   display: flex; 
@@ -24,13 +27,13 @@
 }
 h1 {
   font-size: 28px;
-  color: #333;
+  color: #000000;
   margin-bottom: 15px;
 }
 p, ul {
   font-size: 16px;
   line-height: 1.6;
-  color: #555;
+  color: #565a5c;
   margin-bottom: 20px;
 }
 .flourish-embed {
